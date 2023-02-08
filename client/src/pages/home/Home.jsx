@@ -1,13 +1,16 @@
-import React from 'react';
-import Navbar from '../../components/Navbar';
-import { Box } from '@mui/material';
+import React from "react";
+import Navbar from "../../components/Navbar";
+import Header from "../../components/Header";
+import { Stack } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box sx={{display: 'flex', justifyContent:'center'}}>
-        <Navbar/>
-    </Box>
-  )
-}
+    <Stack sx={{ alignItems: 'center'}}>
+      
+        <Navbar />
+        <Header />
+    </Stack>
+  );
+};
 
-export default Home
+export default Home;
