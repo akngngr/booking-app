@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme, Stack } from "@mui/material";
 import {
     Button,
     styled,
@@ -50,6 +50,33 @@ export const theme = createTheme({
     }
 })
 
+export const MainStack = styled(Stack)({
+    alignItems: 'center',
+    position: 'relative',
+}
+)
+
+export const FeaturedStack = styled(Stack)(({ theme }) => ({
+    width: '80%',
+    marginBottom: 50,
+    gap: '30px',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: "50px",
+    [theme.breakpoints.down("sm")]: {
+        marginTop: '40%',
+        width: '100%',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    }
+
+}));
+
+
+
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
     display: 'flex',
     justifyContent: 'center',
@@ -95,7 +122,7 @@ export const HeaderBox = styled(Box)(({ theme }) => ({
     flexWrap: 'nowrap',
     marginTop: 15,
     gap: 5,
-    
+
     [theme.breakpoints.up("sm")]: {
         display: 'flex',
         flexWrap: 'wrap',
@@ -128,4 +155,20 @@ export const HeaderButton = styled(Button)(({ theme }) => ({
         backgroundColor: theme.palette.secondary.main,
     },
 }));
+
+export const BookingButton = styled(Button)(({ theme }) => ({
+    border: `2px solid ${grey[300]}`,
+    borderRadius: 10,
+    color: theme.palette.primary.light,
+    height: 20,
+    margin: 10,
+    "&:hover": {
+        backgroundColor: theme.palette.otherColor.light,
+    },
+    "&:disabled": {
+        cursor: 'not-allowed'
+    }
+}));
+
+
 

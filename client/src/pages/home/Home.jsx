@@ -1,15 +1,21 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
-import { Stack } from "@mui/material";
+import Featured from "../../components/Featured";
+import { FeaturedStack, MainStack } from "../../theme";
 
 const Home = () => {
   return (
-    <Stack sx={{ alignItems: 'center'}}>
-      
-        <Navbar />
-        <Header />
-    </Stack>
+    <MainStack sx={{ alignItems: "center", position: "relative" }}>
+      <Navbar />
+      <Header />
+      <FeaturedStack>
+        <Featured />
+        <Featured />
+        <Featured />
+        
+      </FeaturedStack>
+    </MainStack>
   );
 };
 

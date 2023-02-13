@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Stack } from "@mui/material";
+import Navbar from "../../components/Navbar"
+import Header from "../../components/Header"
+import { MainStack } from "../../theme";
 
 const List = () => {
   return (
-    <div>List</div>
-  )
-}
+    <MainStack>
+      <Navbar />
+      <Header type="list" />
+    </MainStack>
+  );
+};
 
-export default List
+export default List;
