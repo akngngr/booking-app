@@ -1,4 +1,4 @@
-import { createTheme, Stack } from "@mui/material";
+import { createTheme, ImageListItem, Stack } from "@mui/material";
 import {
     Button,
     styled,
@@ -52,11 +52,40 @@ export const theme = createTheme({
 
 export const MainStack = styled(Stack)({
     alignItems: 'center',
-    position: 'relative',
+    justifyContent: 'center',
+}
+)
+export const ImageItem = styled(ImageListItem)({
+    width: '270px',
+    objectFit: "cover",
+    zIndex: 1,
+    transition: 'z-index 0.3s ease-in-out',
+    "&:hover": {
+        cursor: 'pointer',
+        zIndex: 2,
+    }
 }
 )
 
 export const FeaturedStack = styled(Stack)(({ theme }) => ({
+    position: 'relative',
+    flexDirection: 'row',
+    borderRadius: '20px',
+    transition: 'transform 0.5s ease',
+    [theme.breakpoints.down("sm")]: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+    "&:hover": {
+        transform: 'scale(1.1)',
+        boxShadow: `0 0 0 3px ${theme.palette.secondary.main}`,
+    },
+    
+
+}));
+export const FeaturedBox = styled(Box)(({ theme }) => ({
     width: '80%',
     marginBottom: 50,
     gap: '30px',
@@ -74,8 +103,32 @@ export const FeaturedStack = styled(Stack)(({ theme }) => ({
     }
 
 }));
+export const FeaturedTextBox = styled(Box)(({ theme }) => ({
+    position: "absolute",
+    bottom: "0px",
+    width: "100%",
+    color: "white",
+    padding: "0 0 20px 20px",
+    backgroundColor: "rgba(0,0,0,0.5)",
+    borderRadius: "0 0 20px 20px",
+    transition: 'z-index, opacity 0.3s ease-in-out',
+    zIndex: 1,
+    opacity: 1,    
+    "&:hover": {
+        opacity: 0,  
+    }
+    
+}));
 
-
+export const PropertyBox = styled(Box)(({ theme }) => ({
+    borderRadius: '20px',
+    boxShadow: `0 0 0 2px ${theme.palette.otherColor.light}`,  
+    padding: 8,
+    transition: 'box-shadow 0.3s ease-in-out',
+    "&:hover": {
+        boxShadow: `0 0 0 3px ${theme.palette.secondary.main}`,  
+    }
+}));
 
 export const StyledAppBar = styled(AppBar)(({ theme }) => ({
     display: 'flex',

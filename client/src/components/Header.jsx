@@ -150,10 +150,12 @@ const Header = ({ type }) => {
                 "MM/dd/yyyy"
               )}`}
             </Typography>
+            </Box>
             <Box
               sx={{
                 position: "absolute",
-                top: 50,
+                top: '55px',
+                left: '0',
               }}
             >
               {openDate && (
@@ -165,7 +167,6 @@ const Header = ({ type }) => {
                 />
               )}
             </Box>
-          </Box>
           <Box
             display="flex"
             alignItems="center"
@@ -177,11 +178,13 @@ const Header = ({ type }) => {
             <Typography sx={{ fontSize: { sm: 10, lg: 15 } }}>
               {`${options.adult} Adult · ${options.children} Children · ${options.room} Room`}
             </Typography>
+            </Box>
             {openOptions && (
               <Stack
                 sx={{
                   position: "absolute",
-                  top: "50px",
+                  top: "55px",
+                  right: "50px",
                   justifyContent: "center",
                   alignItems: "flex-end",
                   backgroundColor: theme.palette.otherColor.light,
@@ -256,7 +259,6 @@ const Header = ({ type }) => {
                 </Stack>
               </Stack>
             )}
-          </Box>
           <Box>
             <Button variant="contained">Search</Button>
           </Box>
