@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { ImageItem, MainStack, PropertyBox } from "../theme";
 
 const PropertyList = () => {
@@ -48,7 +48,7 @@ const PropertyList = () => {
 
   const item = dataList.map((data) => (
     <PropertyBox key={data.id}>
-      <ImageItem sx={{ width: "150px" }}>
+      <ImageItem sx={{ width: { xs: "120px", sm: "120px", lg: "160px" } }}>
         <img
           src={data.image}
           alt={data.name}
@@ -63,13 +63,25 @@ const PropertyList = () => {
   return (
     <MainStack
       sx={{
+        width: "80%",
         flexDirection: "row",
         flexWrap: "wrap",
-        gap: 5,
+        gap: 3,
         marginTop: 5,
+        justifyContent: { xs: "center", sm: "flex-start", lg: "flex-start" },
       }}
     >
-      {item}
+      <Box
+        sx={{
+          justifyContent: { xs: "center", sm: "center", lg: "flex-start" },
+          display: "flex",
+          flexWrap: "wrap",
+          width: "100%",
+          gap: 3
+        }}
+      >
+        {item}
+      </Box>
     </MainStack>
   );
 };

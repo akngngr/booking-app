@@ -47,6 +47,7 @@ const Featured = () => {
       city: "Orlando",
     },
   ];
+  
   const item = featuredList.map((featured) => (
     <FeaturedStack key={featured.id}>
       <ImageItem>

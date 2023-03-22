@@ -6,10 +6,12 @@ import { MainStack } from "../../theme";
 import { Box, Typography } from "@mui/material";
 import PropertyList from "../../components/PropertyList";
 import FeaturedProperties from "../../components/FeaturedProperties";
+import MailList from "../../components/MailList";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
-    <MainStack sx={{ position: "relative" }}>
+    <MainStack sx={{ position: "relative", }}>
       <Navbar />
       <Header />
       <Featured />
@@ -21,6 +23,8 @@ const Home = () => {
         <Typography variant="h5">Featured Properties</Typography>
       </Box>
       <FeaturedProperties />
+      <MailList />
+      <Footer />
     </MainStack>
   );
 };

@@ -29,15 +29,15 @@ const Navbar = () => {
               <VpnKeyIcon />
             </IconsBox>
             <TextBox>
-              <Typography>Register</Typography>
+              <Typography variant="subtitle1">Register</Typography>
             </TextBox>
           </StyledButton>
-          <StyledButton to="/login" variant="contained" component={Link}>
+          <StyledButton to="/login" variant="contained" component={Link} value="Login">
             <IconsBox>
               <LoginIcon />
             </IconsBox>
             <TextBox>
-              <Typography>Login</Typography>
+              <Typography variant="subtitle1">Login</Typography>
             </TextBox>
           </StyledButton>
         </StyledBox>

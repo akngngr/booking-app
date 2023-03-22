@@ -82,7 +82,7 @@ export const FeaturedStack = styled(Stack)(({ theme }) => ({
         transform: 'scale(1.1)',
         boxShadow: `0 0 0 3px ${theme.palette.secondary.main}`,
     },
-    
+
 
 }));
 export const FeaturedBox = styled(Box)(({ theme }) => ({
@@ -113,20 +113,23 @@ export const FeaturedTextBox = styled(Box)(({ theme }) => ({
     borderRadius: "0 0 20px 20px",
     transition: 'z-index, opacity 0.3s ease-in-out',
     zIndex: 1,
-    opacity: 1,    
+    opacity: 1,
     "&:hover": {
-        opacity: 0,  
+        opacity: 0,
+        cursor: 'pointer'
     }
-    
+
 }));
 
 export const PropertyBox = styled(Box)(({ theme }) => ({
     borderRadius: '20px',
-    boxShadow: `0 0 0 2px ${theme.palette.otherColor.light}`,  
+    boxShadow: `0 0 0 2px ${theme.palette.otherColor.light}`,
     padding: 8,
     transition: 'box-shadow 0.3s ease-in-out',
+    justifyContent: { xs: 'center', sm: 'flex-start', lg: 'flex-start' },
     "&:hover": {
-        boxShadow: `0 0 0 3px ${theme.palette.secondary.main}`,  
+        boxShadow: `0 0 0 3px ${theme.palette.secondary.main}`,
+        cursor: 'pointer'
     }
 }));
 
@@ -136,16 +139,14 @@ export const StyledAppBar = styled(AppBar)(({ theme }) => ({
     alignSelf: 'center',
     width: '100%',
     [theme.breakpoints.up("sm")]: {
-        width: '80%',
+        width: '90%',
     }
 }));
 
 export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     display: "flex",
     justifyContent: "space-between",
-    [theme.breakpoints.up("md")]: {
-        backgroundColor: theme.palette.otherColor.main,
-    },
+    
 }));
 
 export const StyledBox = styled(Box)(({ theme }) => ({
@@ -162,6 +163,7 @@ export const IconsBox = styled(Box)(({ theme }) => ({
 export const TextBox = styled(Box)(({ theme }) => ({
     display: "none",
     padding: 5,
+    fontSize: 14,
     [theme.breakpoints.up("sm")]: {
         display: "flex",
     },
@@ -186,10 +188,17 @@ export const HeaderBox = styled(Box)(({ theme }) => ({
 
 export const StyledButton = styled(Button)(({ theme }) => ({
     display: { xs: "none", sm: "block" },
+    width: 100,
+    height: 25,
+    padding: 5,
     backgroundColor: theme.palette.otherColor.main,
     borderRadius: theme.palette.borderRadius,
     "&:hover": {
         backgroundColor: theme.palette.secondary.main,
+    },
+    [theme.breakpoints.down("sm")]: {
+        width: "30px",
+        height: "30px",
     },
 
 }));
@@ -214,13 +223,15 @@ export const BookingButton = styled(Button)(({ theme }) => ({
     borderRadius: 10,
     color: theme.palette.primary.light,
     height: 20,
-    margin: 10,
-    "&:hover": {
-        backgroundColor: theme.palette.otherColor.light,
-    },
     "&:disabled": {
-        cursor: 'not-allowed'
-    }
+        cursor: 'not-allowed',
+        pointerEvents: 'all',
+    },
+    "&:hover": {
+        "&:not([disabled])":{
+            backgroundColor: theme.palette.primary.main,
+        }
+    },
 }));
 
 
