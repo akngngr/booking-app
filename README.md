@@ -23,8 +23,8 @@ Follow these steps to get the project up and running on your local machine.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/travel-booking-app.git
-   cd travel-booking-app
+   git clone https://github.com/akngngr/booking-app.git
+   cd booking-app
 2.  **Install dependencies:**
     
     bash
