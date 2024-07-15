@@ -28,9 +28,7 @@ Follow these steps to get the project up and running on your local machine.
 2.  **Install dependencies:**
     
     bash
-    
-    Copy code
-    
+        
     `npm install` 
     
 3.  **Set up Supabase:**
@@ -38,28 +36,20 @@ Follow these steps to get the project up and running on your local machine.
     -   Create a new project on [Supabase](https://supabase.io/).
     -   Get the API URL and Anon Key from the project settings.
     -   Create a `.env.local` file in the root directory and add the following environment variables:
-        
-        env
-        
-        Copy code
-        
-        `NEXT_PUBLIC_SUPABASE_URL=your-supabase-url`
-        `NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key` 
-        
+      
+        ```       
+        NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+        NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 4.  **Start the development server:**
     
     bash
-    
-    Copy code
-    
+        
     `npm run dev` 
     
 5.  **Build for production:**
     
     bash
-    
-    Copy code
-    
+        
     `npm run build
     npm start` 
     
