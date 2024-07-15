@@ -3,6 +3,7 @@
 
 Travel Booking App is a comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations. This project leverages modern web technologies such as Next.js, Supabase, and CSS to provide a seamless and efficient user experience.
 
+![enter image description here](https://akin-gungor.vercel.app/assets/booking-b9d9d480.png)
 ## Features
 
 - **Flight Booking**: Search and book flights with ease.
